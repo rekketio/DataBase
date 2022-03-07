@@ -34,7 +34,7 @@ namespace DataBase1
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rekketio\source\repos\WindowsFormsApp2\Accounts.mdf;Integrated Security=True");
+			SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AutoShow.mdf;Integrated Security=True");
 			connection.Open();
 
 			string commandText = $"SELECT password FROM Accounts WHERE login = @login";
@@ -49,19 +49,20 @@ namespace DataBase1
 				{
 					hashedPassword = (byte[])reader.GetValue(0);
 					byte[] salt = new byte[16];
-					Array.Copy(hashedPassword, 0, salt, 0, 10);
+					Array.Copy(hashedPassword, 0, salt, 0, 16);
 					var pbkdf2 = new Rfc2898DeriveBytes(textBox2.Text, salt, 100000);
 					byte[] hash = pbkdf2.GetBytes(20);
 					for (int i = 0; i < 20; i++)
 						if (hashedPassword[i+16] != hash[i])
 						{
-							MessageBox.Show("Incorrect username or password", "Authentication has failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+							MessageBox.Show("Неверный логин или пароль", "Авторизация не пройдена", MessageBoxButtons.OK, MessageBoxIcon.Error);
 							connection.Close();
 							return;
 						}
 					MainForm form = new MainForm();
 					form.Show();
 					connection.Close();
+					isLoginSuccessfull = true;
 					this.Close();
 				} 
 				else

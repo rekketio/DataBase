@@ -21,7 +21,7 @@ namespace DataBase1
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rekketio\source\repos\WindowsFormsApp2\Accounts.mdf;Integrated Security=True");
+			SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AutoShow.mdf;Integrated Security=True");
 			connection.Open();
 
             string commandText = $"INSERT INTO Accounts (login, password) VALUES (@login, @password)";
@@ -38,8 +38,8 @@ namespace DataBase1
             SqlCommand command = new SqlCommand(commandText, connection);
             command.Parameters.Add("@login", SqlDbType.VarChar);
             command.Parameters["@login"].Value = textBox1.Text;
-            command.Parameters.Add("@password", SqlDbType.VarChar);
-            command.Parameters["@password"].Value = Convert.ToByte(hashBytes);
+            command.Parameters.Add("@password", SqlDbType.Binary);
+            command.Parameters["@password"].Value = hashBytes;
             command.ExecuteNonQuery();
 			connection.Close();
 		}
