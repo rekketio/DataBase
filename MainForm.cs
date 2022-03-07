@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClassLibrary;
 
 namespace DataBase1
 {
@@ -17,6 +18,8 @@ namespace DataBase1
 		public MainForm()
 		{
 			InitializeComponent();
+			CustomClass cl = new CustomClass();
+			cl.DoSomething(1, 2);
 		}
 
         private void button2_Click(object sender, EventArgs e)
