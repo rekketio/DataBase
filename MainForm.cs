@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClassLibrary;
 
 namespace DataBase1
 {
@@ -18,8 +17,6 @@ namespace DataBase1
 		public MainForm()
 		{
 			InitializeComponent();
-			CustomClass cl = new CustomClass();
-			cl.DoSomething(1, 2);
 		}
 
         private void button2_Click(object sender, EventArgs e)
@@ -59,19 +56,6 @@ namespace DataBase1
 
 			
 #endif
-			SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AutoShow.mdf;Integrated Security=True");
-			connection.Open();
-			textBox1.Text = "";
-			string commandText = "SELECT * FROM Cars";
-			SqlCommand command = new SqlCommand(commandText, connection);
-			using (SqlDataReader reader = command.ExecuteReader())
-            {
-				while (reader.Read())
-                {
-					textBox1.Text += reader.GetValue(0).ToString() + " " + reader.GetValue(1) + " " + reader.GetValue(2).ToString() + " " + reader.GetValue(3).ToString() + " " + reader.GetValue(4).ToString() + " " + reader.GetValue(5).ToString() + "\r\n";
-				}
-            }
-			connection.Close();
 		}
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
