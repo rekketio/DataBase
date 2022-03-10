@@ -31,10 +31,10 @@ namespace WindowsFormsApp2.Forms
 		{
             this.components = new System.ComponentModel.Container();
             this.carsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.accountsDataSet = new WindowsFormsApp2.Data.DataSets.AccountsDataSet();
+            this.accountsDataSet = new WindowsFormsApp2.Data.AccountsDataSet();
             this.button1 = new System.Windows.Forms.Button();
-            this.carsTableAdapter = new WindowsFormsApp2.Data.DataSets.AccountsDataSetTableAdapters.CarsTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApp2.Data.DataSets.AccountsDataSetTableAdapters.TableAdapterManager();
+            this.carsTableAdapter = new WindowsFormsApp2.Data.AccountsDataSetTableAdapters.CarsTableAdapter();
+            this.tableAdapterManager = new WindowsFormsApp2.Data.AccountsDataSetTableAdapters.TableAdapterManager();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@ namespace WindowsFormsApp2.Forms
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CarsTableAdapter = this.carsTableAdapter;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApp2.Data.DataSets.AccountsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = WindowsFormsApp2.Data.AccountsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // button2
             // 
@@ -131,10 +131,10 @@ namespace WindowsFormsApp2.Forms
 		}
 
         #endregion
-        private WindowsFormsApp2.Data.DataSets.AccountsDataSet accountsDataSet;
+        private WindowsFormsApp2.Data.AccountsDataSet accountsDataSet;
         private System.Windows.Forms.BindingSource carsBindingSource;
-        private WindowsFormsApp2.Data.DataSets.AccountsDataSetTableAdapters.CarsTableAdapter carsTableAdapter;
-        private WindowsFormsApp2.Data.DataSets.AccountsDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private WindowsFormsApp2.Data.AccountsDataSetTableAdapters.CarsTableAdapter carsTableAdapter;
+        private WindowsFormsApp2.Data.AccountsDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
