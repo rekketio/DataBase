@@ -134,38 +134,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountsDataSet.Designer.cs">
+    <Compile Include="Data\DataSets\AccountsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AccountsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Forms\CarsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Forms\CarsForm.Designer.cs">
+      <DependentUpon>CarsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts.Designer.cs">
+      <DependentUpon>Contracts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataSets\ContractsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContractsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistrationForm.cs">
+    <Compile Include="Forms\RegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistrationForm.Designer.cs">
+    <Compile Include="Forms\RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Scripts\DataBaseInteraction.cs" />
+    <Compile Include="Scripts\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Forms\Contracts.resx">
+      <DependentUpon>Contracts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistrationForm.resx">
+    <EmbeddedResource Include="Forms\RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -177,16 +198,27 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="AccountsDataSet.xsc">
+    <None Include="Data\DataSets\AccountsDataSet.xsc">
       <DependentUpon>AccountsDataSet.xsd</DependentUpon>
     </None>
-    <None Include="AccountsDataSet.xsd">
+    <None Include="Data\DataSets\AccountsDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>AccountsDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="AccountsDataSet.xss">
+    <None Include="Data\DataSets\AccountsDataSet.xss">
       <DependentUpon>AccountsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DataSets\ContractsDataSet.xsc">
+      <DependentUpon>ContractsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DataSets\ContractsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ContractsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\DataSets\ContractsDataSet.xss">
+      <DependentUpon>ContractsDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -215,10 +247,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AutoShow.mdf">
+    <Content Include="Data\DataBases\AutoShow.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="AutoShow_log.ldf">
+    <Content Include="Data\DataBases\AutoShow_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>AutoShow.mdf</DependentUpon>
     </Content>
