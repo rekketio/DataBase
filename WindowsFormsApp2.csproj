@@ -134,62 +134,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\AccountsDataSet.Designer.cs">
+    <Compile Include="SQL\Data\AccountsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AccountsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CarsForm.cs">
+    <Compile Include="SQL\Forms\CarsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CarsForm.Designer.cs">
+    <Compile Include="SQL\Forms\CarsForm.Designer.cs">
       <DependentUpon>CarsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Contracts.cs">
+    <Compile Include="SQL\Forms\Contracts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Contracts.Designer.cs">
+    <Compile Include="SQL\Forms\Contracts.Designer.cs">
       <DependentUpon>Contracts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\ContractsDataSet.Designer.cs">
+    <Compile Include="SQL\Data\ContractsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ContractsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LoginForm.cs">
+    <Compile Include="SQL\Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\LoginForm.Designer.cs">
+    <Compile Include="SQL\Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MainForm.cs">
+    <Compile Include="SQL\Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MainForm.Designer.cs">
+    <Compile Include="SQL\Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RegistrationForm.cs">
+    <Compile Include="SQL\Forms\RegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\RegistrationForm.Designer.cs">
+    <Compile Include="SQL\Forms\RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Scripts\DataBaseInteraction.cs" />
-    <Compile Include="Scripts\Program.cs" />
+    <Compile Include="SQL\Scripts\DataBaseInteraction.cs" />
+    <Compile Include="SQL\Scripts\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\CarsForm.resx">
+    <EmbeddedResource Include="SQL\Forms\CarsForm.resx">
       <DependentUpon>CarsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Contracts.resx">
+    <EmbeddedResource Include="SQL\Forms\Contracts.resx">
       <DependentUpon>Contracts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoginForm.resx">
+    <EmbeddedResource Include="SQL\Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainForm.resx">
+    <EmbeddedResource Include="SQL\Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\RegistrationForm.resx">
+    <EmbeddedResource Include="SQL\Forms\RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -201,26 +201,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Data\AccountsDataSet.xsc">
+    <None Include="SQL\Data\AccountsDataSet.xsc">
       <DependentUpon>AccountsDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Data\AccountsDataSet.xsd">
+    <None Include="SQL\Data\AccountsDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>AccountsDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Data\AccountsDataSet.xss">
+    <None Include="SQL\Data\AccountsDataSet.xss">
       <DependentUpon>AccountsDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Data\ContractsDataSet.xsc">
+    <None Include="SQL\Data\ContractsDataSet.xsc">
       <DependentUpon>ContractsDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Data\ContractsDataSet.xsd">
+    <None Include="SQL\Data\ContractsDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ContractsDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Data\ContractsDataSet.xss">
+    <None Include="SQL\Data\ContractsDataSet.xss">
       <DependentUpon>ContractsDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -250,10 +250,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\AutoShow.mdf">
+    <Content Include="SQL\Data\AutoShow.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\AutoShow_log.ldf">
+    <Content Include="SQL\Data\AutoShow_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>AutoShow.mdf</DependentUpon>
     </Content>
