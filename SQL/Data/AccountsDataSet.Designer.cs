@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace WindowsFormsApp2.SQL.Data {
+namespace SQL_Project.SQL.Data {
     
     
     /// <summary>
@@ -771,7 +771,7 @@ namespace WindowsFormsApp2.SQL.Data {
         }
     }
 }
-namespace WindowsFormsApp2.SQL.Data.AccountsDataSetTableAdapters {
+namespace SQL_Project.SQL.Data.AccountsDataSetTableAdapters {
     
     
     /// <summary>
@@ -952,7 +952,7 @@ SELECT Id, manyfactory, model, releaseyear, carbody, hp, gosnumber FROM Cars WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.AccountsConnectionString;
+            this._connection.ConnectionString = global::SQL_Project.Properties.Settings.Default.AccountsConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
-using WindowsFormsApp2.SQL.Forms;
+using SQL_Project.SQL.Forms;
 
-namespace WindowsFormsApp2.SQL.Scripts
+namespace SQL_Project.SQL.Scripts
 {
 	static class Program
 	{

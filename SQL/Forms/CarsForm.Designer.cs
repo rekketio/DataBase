@@ -1,5 +1,5 @@
 ﻿
-namespace WindowsFormsApp2.SQL.Forms
+namespace SQL_Project.SQL.Forms
 {
     partial class CarsForm
     {
@@ -31,10 +31,10 @@ namespace WindowsFormsApp2.SQL.Forms
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarsForm));
-            this.accountsDataSet = new WindowsFormsApp2.SQL.Data.AccountsDataSet();
+            this.accountsDataSet = new SQL_Project.SQL.Data.AccountsDataSet();
             this.carsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.carsTableAdapter = new WindowsFormsApp2.SQL.Data.AccountsDataSetTableAdapters.CarsTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApp2.SQL.Data.AccountsDataSetTableAdapters.TableAdapterManager();
+            this.carsTableAdapter = new SQL_Project.SQL.Data.AccountsDataSetTableAdapters.CarsTableAdapter();
+            this.tableAdapterManager = new SQL_Project.SQL.Data.AccountsDataSetTableAdapters.TableAdapterManager();
             this.carsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -94,7 +94,7 @@ namespace WindowsFormsApp2.SQL.Forms
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CarsTableAdapter = this.carsTableAdapter;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApp2.SQL.Data.AccountsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = SQL_Project.SQL.Data.AccountsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // carsBindingNavigator
             // 

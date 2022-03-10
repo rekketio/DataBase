@@ -1,6 +1,6 @@
-﻿using WindowsFormsApp2.SQL.Data;
+﻿using SQL_Project.SQL.Data;
 
-namespace WindowsFormsApp2.SQL.Forms
+namespace SQL_Project.SQL.Forms
 {
     partial class Contracts
     {
@@ -45,10 +45,10 @@ namespace WindowsFormsApp2.SQL.Forms
             this.label5 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.contractsDataSet = new WindowsFormsApp2.SQL.Data.ContractsDataSet();
+            this.contractsDataSet = new SQL_Project.SQL.Data.ContractsDataSet();
             this.contractsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.contractsTableAdapter = new WindowsFormsApp2.SQL.Data.ContractsDataSetTableAdapters.ContractsTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApp2.SQL.Data.ContractsDataSetTableAdapters.TableAdapterManager();
+            this.contractsTableAdapter = new SQL_Project.SQL.Data.ContractsDataSetTableAdapters.ContractsTableAdapter();
+            this.tableAdapterManager = new SQL_Project.SQL.Data.ContractsDataSetTableAdapters.TableAdapterManager();
             this.contractsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -202,7 +202,7 @@ namespace WindowsFormsApp2.SQL.Forms
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.ContractsTableAdapter = this.contractsTableAdapter;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApp2.SQL.Data.ContractsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = SQL_Project.SQL.Data.ContractsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // contractsBindingNavigator
             // 

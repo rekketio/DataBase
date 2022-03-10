@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
-using WindowsFormsApp2.SQL.Scripts;
+using SQL_Project.SQL.Scripts;
 
-namespace WindowsFormsApp2.SQL.Forms
+namespace SQL_Project.SQL.Forms
 {
     public partial class CarsForm : Form
     {

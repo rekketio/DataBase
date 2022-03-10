@@ -2,7 +2,7 @@
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp2.SQL.Forms
+namespace SQL_Project.SQL.Forms
 {
 	public partial class MainForm : Form
 	{

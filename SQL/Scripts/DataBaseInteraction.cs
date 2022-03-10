@@ -5,7 +5,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp2.SQL.Scripts
+namespace SQL_Project.SQL.Scripts
 {
     public class DataBaseInteraction
     {

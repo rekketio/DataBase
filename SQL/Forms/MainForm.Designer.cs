@@ -1,5 +1,5 @@
 ﻿
-namespace WindowsFormsApp2.SQL.Forms
+namespace SQL_Project.SQL.Forms
 {
 	partial class MainForm
 	{
@@ -31,10 +31,10 @@ namespace WindowsFormsApp2.SQL.Forms
 		{
             this.components = new System.ComponentModel.Container();
             this.carsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.accountsDataSet = new WindowsFormsApp2.SQL.Data.AccountsDataSet();
+            this.accountsDataSet = new SQL_Project.SQL.Data.AccountsDataSet();
             this.button1 = new System.Windows.Forms.Button();
-            this.carsTableAdapter = new WindowsFormsApp2.SQL.Data.AccountsDataSetTableAdapters.CarsTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApp2.SQL.Data.AccountsDataSetTableAdapters.TableAdapterManager();
+            this.carsTableAdapter = new SQL_Project.SQL.Data.AccountsDataSetTableAdapters.CarsTableAdapter();
+            this.tableAdapterManager = new SQL_Project.SQL.Data.AccountsDataSetTableAdapters.TableAdapterManager();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@ namespace WindowsFormsApp2.SQL.Forms
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CarsTableAdapter = this.carsTableAdapter;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApp2.SQL.Data.AccountsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = SQL_Project.SQL.Data.AccountsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // button2
             // 
@@ -133,10 +133,10 @@ namespace WindowsFormsApp2.SQL.Forms
 		}
 
         #endregion
-        private WindowsFormsApp2.SQL.Data.AccountsDataSet accountsDataSet;
+        private SQL_Project.SQL.Data.AccountsDataSet accountsDataSet;
         private System.Windows.Forms.BindingSource carsBindingSource;
-        private WindowsFormsApp2.SQL.Data.AccountsDataSetTableAdapters.CarsTableAdapter carsTableAdapter;
-        private WindowsFormsApp2.SQL.Data.AccountsDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private SQL_Project.SQL.Data.AccountsDataSetTableAdapters.CarsTableAdapter carsTableAdapter;
+        private SQL_Project.SQL.Data.AccountsDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

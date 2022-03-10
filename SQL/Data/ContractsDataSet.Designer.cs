@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace WindowsFormsApp2.SQL.Data {
+namespace SQL_Project.SQL.Data {
     
     
     /// <summary>
@@ -785,7 +785,7 @@ namespace WindowsFormsApp2.SQL.Data {
         }
     }
 }
-namespace WindowsFormsApp2.SQL.Data.ContractsDataSetTableAdapters {
+namespace SQL_Project.SQL.Data.ContractsDataSetTableAdapters {
     
     
     /// <summary>
@@ -964,7 +964,7 @@ SELECT Id, autoid, begin_date, contract_long, cost, return_date, notes FROM Cont
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.AccountsConnectionString;
+            this._connection.ConnectionString = global::SQL_Project.Properties.Settings.Default.AccountsConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -1,5 +1,5 @@
 ﻿
-namespace WindowsFormsApp2.SQL.Forms
+namespace SQL_Project.SQL.Forms
 {
 	partial class LoginForm
 	{
