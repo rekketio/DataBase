@@ -21,7 +21,7 @@ namespace WindowsFormsApp2.SQL.Forms
         private void MainForm_Load(object sender, EventArgs e)
         {
             SqlConnection connection = new SqlConnection();
-            connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\AutoShow.mdf;Integrated Security=True");
+            connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SQL\Data\AutoShow.mdf;Integrated Security=True");
             connection.Open();
             SqlCommand carscommand = new SqlCommand($"SELECT COUNT(*) FROM Cars", connection);
             SqlCommand contractscommand = new SqlCommand($"SELECT COUNT(*) FROM Contracts", connection);

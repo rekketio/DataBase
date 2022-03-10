@@ -27,7 +27,7 @@ namespace WindowsFormsApp2.SQL.Scripts
         public void Connect(Form form)
         {
             form.FormClosing += Disconnect;
-            connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\DataBases\AutoShow.mdf;Integrated Security=True");
+            connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SQL\Data\DataBases\AutoShow.mdf;Integrated Security=True");
             connection.Open();
         }
 
@@ -49,7 +49,7 @@ namespace WindowsFormsApp2.SQL.Scripts
             Array.Copy(hash, 0, hashBytes, 16, 20);
 
             SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\AutoShow.mdf;Integrated Security=True";
+            connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SQL\Data\AutoShow.mdf;Integrated Security=True";
             connection.Open();
             var command = new SqlCommand($"INSERT INTO Accounts (login, password) VALUES (@login, @password);", connection);
 
@@ -66,7 +66,7 @@ namespace WindowsFormsApp2.SQL.Scripts
         public bool Login(string login, string password)
         {
             SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\AutoShow.mdf;Integrated Security=True";
+            connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SQL\Data\AutoShow.mdf;Integrated Security=True";
             connection.Open();
 
             SqlCommand command = new SqlCommand($"SELECT password FROM Accounts WHERE login = @login;", connection);
@@ -96,7 +96,7 @@ namespace WindowsFormsApp2.SQL.Scripts
         public void AddCar(string manufacture, string model, string releaseyear, string carbody, string horsepowers, string gosnumber)
         {
             SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\AutoShow.mdf;Integrated Security=True";
+            connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SQL\Data\AutoShow.mdf;Integrated Security=True";
             connection.Open();
 
             SqlCommand command = new SqlCommand("INSERT INTO Cars (manyfactory, model, releaseyear, carbody, hp, gosnumber) VALUES (@mf, @model, @ry, @cb, @hp, @gosnum);", connection);
@@ -121,7 +121,7 @@ namespace WindowsFormsApp2.SQL.Scripts
         public void AddContract(string autoid, string begin_date, string contract_long, string cost, string return_date, string notes)
         {
             SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\AutoShow.mdf;Integrated Security=True";
+            connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SQL\Data\AutoShow.mdf;Integrated Security=True";
             connection.Open();
 
             SqlCommand command = new SqlCommand("INSERT INTO Contracts (autoid, begin_date, contract_long, cost, return_date, notes) VALUES (@autoid, @bd, @cl, @cost, @rd, @notes);", connection);
