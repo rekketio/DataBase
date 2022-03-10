@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
+using WindowsFormsApp2.Scripts;
 
 namespace WindowsFormsApp2.Forms
 {
     public partial class Contracts : Form
     {
+        DataBaseInteraction db = new DataBaseInteraction();
         private bool needToClose = true;
         public Contracts()
         {
@@ -23,6 +25,24 @@ namespace WindowsFormsApp2.Forms
         {
             if (needToClose)
                 Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            db.AddContract(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text);
+            this.tableAdapterManager.UpdateAll(this.contractsDataSet);
+        }
+
+        private void contractsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.contractsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.contractsDataSet);
+        }
+
+        private void Contracts_Load(object sender, EventArgs e)
+        {
+            this.contractsTableAdapter.Fill(this.contractsDataSet.Contracts);
         }
     }
 }

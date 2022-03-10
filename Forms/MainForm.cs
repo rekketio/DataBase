@@ -20,14 +20,13 @@ namespace WindowsFormsApp2.Forms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            this.carsTableAdapter.Fill(this.accountsDataSet.Cars);
             SqlConnection connection = new SqlConnection();
-            connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\DataBases\AutoShow.mdf;Integrated Security=True");
+            connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\AutoShow.mdf;Integrated Security=True");
             connection.Open();
             SqlCommand carscommand = new SqlCommand($"SELECT COUNT(*) FROM Cars", connection);
             SqlCommand contractscommand = new SqlCommand($"SELECT COUNT(*) FROM Contracts", connection);
-            int carscount = carscommand.ExecuteNonQuery();
-            int contractscount = contractscommand.ExecuteNonQuery();
+            int carscount = (Int32)carscommand.ExecuteScalar();
+            int contractscount = (Int32)contractscommand.ExecuteScalar();
             label1.Text = $"Всего записей в таблице Автомобили: {carscount}";
             label2.Text = $"Всего записей в таблице Контракты: {contractscount}";
             connection.Close();

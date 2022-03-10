@@ -177,6 +177,9 @@
     <Compile Include="Scripts\DataBaseInteraction.cs" />
     <Compile Include="Scripts\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\CarsForm.resx">
+      <DependentUpon>CarsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Contracts.resx">
       <DependentUpon>Contracts.cs</DependentUpon>
     </EmbeddedResource>

@@ -53,9 +53,9 @@ namespace WindowsFormsApp2.Scripts
             Array.Copy(hash, 0, hashBytes, 16, 20);
 
             SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\DataBases\AutoShow.mdf;Integrated Security=True";
+            connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\AutoShow.mdf;Integrated Security=True";
             connection.Open();
-            var command = new SqlCommand($"INSERT INTO Accounts (username, password) VALUES (@username, @password);", connection);
+            var command = new SqlCommand($"INSERT INTO Accounts (login, password) VALUES (@login, @password);", connection);
 
             command.Parameters.Add("@login", SqlDbType.VarChar);
             command.Parameters["@login"].Value = login;
@@ -70,7 +70,7 @@ namespace WindowsFormsApp2.Scripts
         public bool Login(string login, string password)
         {
             SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\DataBases\AutoShow.mdf;Integrated Security=True";
+            connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\AutoShow.mdf;Integrated Security=True";
             connection.Open();
 
             SqlCommand command = new SqlCommand($"SELECT password FROM Accounts WHERE login = @login;", connection);
@@ -97,13 +97,13 @@ namespace WindowsFormsApp2.Scripts
                 return true;
             }
         }
-        public void AddCar(string manufacture, string model, int releaseyear, string carbody, int horsepowers, string gosnumber)
+        public void AddCar(string manufacture, string model, string releaseyear, string carbody, string horsepowers, string gosnumber)
         {
             SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\DataBases\AutoShow.mdf;Integrated Security=True";
+            connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\AutoShow.mdf;Integrated Security=True";
             connection.Open();
 
-            SqlCommand command = new SqlCommand($"INSERT INTO Cars (manyfactory, model, releaseyear, carbody, hp, gosnumber) VALUES (@mf, @model, @ry, @cb, @hp, @gosnum);", connection);
+            SqlCommand command = new SqlCommand("INSERT INTO Cars (manyfactory, model, releaseyear, carbody, hp, gosnumber) VALUES (@mf, @model, @ry, @cb, @hp, @gosnum);", connection);
 
             command.Parameters.Add("@mf", SqlDbType.NVarChar);
             command.Parameters.Add("@model", SqlDbType.NVarChar);
@@ -114,10 +114,35 @@ namespace WindowsFormsApp2.Scripts
 
             command.Parameters["@mf"].Value = manufacture;
             command.Parameters["@model"].Value = model;
-            command.Parameters["@ry"].Value = releaseyear;
+            command.Parameters["@ry"].Value = Convert.ToInt32(releaseyear);
             command.Parameters["@cb"].Value = carbody;
-            command.Parameters["@hp"].Value = horsepowers;
+            command.Parameters["@hp"].Value = Convert.ToInt32(horsepowers);
             command.Parameters["@gosnum"].Value = gosnumber;
+
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+        public void AddContract(string autoid, string begin_date, string contract_long, string cost, string return_date, string notes)
+        {
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data\AutoShow.mdf;Integrated Security=True";
+            connection.Open();
+
+            SqlCommand command = new SqlCommand("INSERT INTO Contracts (autoid, begin_date, contract_long, cost, return_date, notes) VALUES (@autoid, @bd, @cl, @cost, @rd, @notes);", connection);
+
+            command.Parameters.Add("@autoid", SqlDbType.NChar);
+            command.Parameters.Add("@bd", SqlDbType.Date);
+            command.Parameters.Add("@cl", SqlDbType.Int);
+            command.Parameters.Add("@cost", SqlDbType.Int);
+            command.Parameters.Add("@rd", SqlDbType.Date);
+            command.Parameters.Add("@notes", SqlDbType.NVarChar);
+
+            command.Parameters["@autoid"].Value = autoid;
+            command.Parameters["@bd"].Value = begin_date;
+            command.Parameters["@cl"].Value = Convert.ToInt32(contract_long);
+            command.Parameters["@cost"].Value = Convert.ToInt32(cost);
+            command.Parameters["@rd"].Value = Convert.ToDateTime(return_date);
+            command.Parameters["@notes"].Value = notes;
 
             command.ExecuteNonQuery();
             connection.Close();
