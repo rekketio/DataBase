@@ -134,7 +134,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\DataSets\AccountsDataSet.Designer.cs">
+    <Compile Include="Data\AccountsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AccountsDataSet.xsd</DependentUpon>
@@ -151,7 +151,7 @@
     <Compile Include="Forms\Contracts.Designer.cs">
       <DependentUpon>Contracts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\DataSets\ContractsDataSet.Designer.cs">
+    <Compile Include="Data\ContractsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ContractsDataSet.xsd</DependentUpon>
@@ -198,26 +198,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Data\DataSets\AccountsDataSet.xsc">
+    <None Include="Data\AccountsDataSet.xsc">
       <DependentUpon>AccountsDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Data\DataSets\AccountsDataSet.xsd">
+    <None Include="Data\AccountsDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>AccountsDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Data\DataSets\AccountsDataSet.xss">
+    <None Include="Data\AccountsDataSet.xss">
       <DependentUpon>AccountsDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Data\DataSets\ContractsDataSet.xsc">
+    <None Include="Data\ContractsDataSet.xsc">
       <DependentUpon>ContractsDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Data\DataSets\ContractsDataSet.xsd">
+    <None Include="Data\ContractsDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ContractsDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Data\DataSets\ContractsDataSet.xss">
+    <None Include="Data\ContractsDataSet.xss">
       <DependentUpon>ContractsDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -247,10 +247,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\DataBases\AutoShow.mdf">
+    <Content Include="Data\AutoShow.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\DataBases\AutoShow_log.ldf">
+    <Content Include="Data\AutoShow_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>AutoShow.mdf</DependentUpon>
     </Content>
