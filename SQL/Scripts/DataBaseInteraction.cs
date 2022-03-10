@@ -88,9 +88,11 @@ namespace SQL_Project.SQL.Scripts
                             connection.Close();
                             return false;
                         }
+                    connection.Close();
+                    return true;
                 }
                 connection.Close();
-                return true;
+                return false;
             }
         }
         public void AddCar(string manufacture, string model, string releaseyear, string carbody, string horsepowers, string gosnumber)
